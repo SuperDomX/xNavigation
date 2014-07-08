@@ -21,7 +21,7 @@
         <ol class="dd-list"> 
             {foreach $navi as $nav => $l} 
                 {if $l.parent == $link.id} 
-                   {include file="watchtower/navigation/nest.html" link=$l}
+                   {include file="./nest.tpl" link=$l}
                 {/if}
             {/foreach}
         </ol> 

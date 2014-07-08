@@ -17,7 +17,7 @@
                 <ol class="dd-list" style=" ">  
                     {foreach $navi as $n => $link}
                         {if $link.parent == 0} 
-                            {include file="watchtower/navigation/nest.html" link=$link} 
+                            {include file="./nest.tpl" link=$link} 
                         {/if} 
                     {/foreach}
                 </ol> 
@@ -42,7 +42,7 @@
                 <ol class="dd-list"> 
                 {foreach $deku as $n => $link}
                     {if $link.parent == 0} 
-                        {include file="watchtower/navigation/nest.html" link=$link navi=$deku} 
+                        {include file="./nest.tpl" link=$link navi=$deku} 
                     {/if} 
                 {/foreach}
                 </ol>
