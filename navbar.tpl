@@ -49,7 +49,7 @@
                               <ul class="dropdown-menu"> 
                                   {foreach $navi as $nav => $l} 
                                       {if $l.parent == $link.id} 
-                                         {include file="frontdoor/navigation/navi.nest.html" linktothe=$linktothe link=$l sub=true}
+                                         {include file="./navi.nest.tpl" linktothe=$linktothe link=$l sub=true}
                                       {/if}
                                   {/foreach}
                               </ul> 
