@@ -1,7 +1,4 @@
 {assign var=flipBlox value='navbar-blox'} 
-
-
-
 <div class="{$flipBlox}"> 
   <div class="front"> 
     <!-- Static navbar -->
