@@ -111,52 +111,52 @@
 				$admin_menu = $this->mkAdminMenu(); 
 
 				$top_ten = [];	
-				if($X->atSideDoor == false){ 
-					$top_ten = $X->q()->Q("SELECT 
-						request_call  as link,
-						count(user_id) as count 
-					FROM ".$X->q()->PREFIX."page_visits
-					WHERE user_id = '1' 
-					GROUP BY request_call
-					ORDER BY count desc");  
+// 				if($X->atSideDoor == false){ 
+// 					$top_ten = $X->q()->Q("SELECT 
+// 						request_call  as link,
+// 						count(user_id) as count 
+// 					FROM ".$X->q()->PREFIX."page_visits
+// 					WHERE user_id = '1' 
+// 					GROUP BY request_call
+// 					ORDER BY count desc");  
 					
-// 					$top_ten = $X->q()->Select("
-// 						request_call as link,
-// 						count(user_id) as count
-// 						",
-// 						"page_visits",
-// 						"user_id = 1 GROUP BY request_call ORDER BY count desc"
-// 					);
-					//$top_ten = null;
+// // 					$top_ten = $X->q()->Select("
+// // 						request_call as link,
+// // 						count(user_id) as count
+// // 						",
+// // 						"page_visits",
+// // 						"user_id = 1 GROUP BY request_call ORDER BY count desc"
+// // 					);
+// 					//$top_ten = null;
 
-					$xtras = $X->getXtras(); 
-					// Glue the results with the Icons.
-					if(!empty($top_ten)){
-						foreach ($top_ten as $k => $v) {
-							$php = 'x'.ucfirst($v['link'].'.php');
+// 					$xtras = $X->getXtras(); 
+// 					// Glue the results with the Icons.
+// 					if(!empty($top_ten)){
+// 						foreach ($top_ten as $k => $v) {
+// 							$php = 'x'.ucfirst($v['link'].'.php');
 						
-							if(isset($xtras[$php])){
-								$top_ten[$k]['mini'] = $xtras[$php]['mini'];
-								$top_ten[$k]['name'] = $xtras[$php]['name'];
-								$top_ten[$k]['desc'] = $xtras[$php]['desc'];
-								$top_ten[$k]['link'] = $xtras[$php]['link'];
-							}
+// 							if(isset($xtras[$php])){
+// 								$top_ten[$k]['mini'] = $xtras[$php]['mini'];
+// 								$top_ten[$k]['name'] = $xtras[$php]['name'];
+// 								$top_ten[$k]['desc'] = $xtras[$php]['desc'];
+// 								$top_ten[$k]['link'] = $xtras[$php]['link'];
+// 							}
 						
-							if(empty($top_ten[$k]['mini'])){
-								unset($top_ten[$k]);
-							}
-						}
+// 							if(empty($top_ten[$k]['mini'])){
+// 								unset($top_ten[$k]);
+// 							}
+// 						}
 						
-						$top_ten = array_values($top_ten);
-						// Trim to 10.
-						foreach ($top_ten as $key => $value) {
-							if($key >= 10){
-								unset($top_ten[$key]);
-							}
-						}
-					}
+// 						$top_ten = array_values($top_ten);
+// 						// Trim to 10.
+// 						foreach ($top_ten as $key => $value) {
+// 							if($key >= 10){
+// 								unset($top_ten[$key]);
+// 							}
+// 						}
+// 					}
 						
-				}  
+// 				}  
 
 				// If there are no Icons no the Desktop. Show the 'tutorial page.'
 
@@ -233,7 +233,7 @@
 			$q = $this->q();
 
 
-			$q->mBy = array('weight'=>'ASC');
+			//$q->mBy = array('weight'=>'ASC');
 
 
 			return $q->Select('*','admin_shortcuts',array(
