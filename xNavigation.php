@@ -332,6 +332,18 @@
 		}
 
 		/**
+			@name manageNav
+			@blox Manage Navigation
+			@desc Every page needs a navigator to help others know where to go.
+			@icon sitemap
+			@backdoor true
+		**/
+		function manageNav(){
+			$this->menu($sub); 
+			return $this->manaTree();
+		}
+
+		/**
 		  @name manaTree
 		  @desc Returns the Navigation 
 		  @var navi = active links deku = offline links.
