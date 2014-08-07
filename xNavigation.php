@@ -31,9 +31,9 @@
 					'icon'        =>	array('Type' => 'varchar(255)'),
 					'weight'      =>	array('Type'=>'int(2)'),
 					'user_id'     =>  array('Type'=>'int(8)'),
-					'toolbar'     => 	array('Type'=>'int(1)'),
-					'top'         =>  array('Type'=>'int(4)'),
-					'left'        =>  array('Type'=>'int(4)')
+					'toolbar'     => array('Type'=>'int(1)'),
+					'top'         => array('Type'=>'int(4)'),
+					'left'        => array('Type'=>'int(4)')
 				),
 				'public_main_menu' =>array(
 					'text'    =>	'title',
