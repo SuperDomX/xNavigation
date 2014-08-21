@@ -38,8 +38,7 @@
 				'public_main_menu' =>array(
 					'text'    =>	'title',
 					'title'   =>	array('Type' => 'varchar(255)'),
-					'checked' =>	array('Type' => 'boolean','Default'=>1),
-					
+					'checked' =>	array('Type' => 'boolean','Default'=>1), 
 					'iconCls' =>	array('Type' => 'varchar(255)'),
 					'link'    =>	array('Type' => 'varchar(255)'),
 					'parent'  =>  	array('Type' => 'int(5)'),
@@ -52,7 +51,7 @@
 					'icon'		=>	array('Type' => 'varchar(255)'),
 					'img'		=>	array('Type' => 'varchar(255)'),
 					'weight'	=>	array('Type' => 'int(2)'),
-					'active'	=>  array('Type' => 'int(1)','Default'=>'0')
+					'active'	=>  array('Type' => 'int(1)','Default'=>0)
 				),
 				'navi_heylisten' => array( 
 					'quest' 	  		=>	array('Type' => 'varchar(255)'),
