@@ -1,6 +1,6 @@
 <?php
 /**
- * @name SiteMap
+ * @name Site Map
  * @desc Control the Quick Nav, Main Menu, and Site Map of your website.
  * @version v1.0.1
  * @author i@xtiv.net
@@ -60,10 +60,6 @@
 				)
 			);
 		}
-
-		 
-
-		 
 
 		/**
 			@name navbar
@@ -325,20 +321,33 @@
 
 		}
 
+		public function returnMenus()
+		{
+
+
+
+			return $menus;
+		}
+
 		function index($sub=null){
 			$this->menu($sub); 
 			return $this->manaTree();
 		}
 
 		/**
-			@name manageNav
-			@blox Manage Navigation
+			@name navigation
+			@blox Navigation Menus
 			@desc Every page needs a navigator to help others know where to go.
 			@icon sitemap
 			@backdoor true
 		**/
-		function manageNav(){
-			$this->menu($sub); 
+		function navigation(){
+			// $this->menu($sub);    
+			return $this->navTree();
+		}
+
+		function navTree(){
+			// $this->menu($sub);    
 			return $this->manaTree();
 		}
 
@@ -350,17 +359,21 @@
 		function manaTree(){
 			$navi = $this->heyNavi(1);
 			$deku = $this->heyNavi(0);
+
 			$this->set('navi',$navi);
+			
 			return array(
 				'navi' => ( empty($navi) ) ? 0 : $navi, 
 				'deku' => ( empty($deku) ) ? 0 : $deku,
+				'main' => ( empty($deku) ) ? 0 : $deku,
 				// 'sql'	=> $this->q()->mSql,
 				'admin_menu' => $this->mkAdminMenu()
 			);
 		}
 
-		function heyNavi($on=null){
+		function heyNavi($on=null,$filter=null){
 			$q = $this->q();
+
 			
 
 			// Debugging code: 
@@ -370,14 +383,9 @@
 			// 	'active' => 0
 			// ));
 
+			$q->mBy = 'ORDER BY weight ASC';			
 
-			$q->mBy = 'ORDER BY weight ASC';
-
-			
-
-			return $q->Select('*','navigation',array(
-				'active' => $on
-			));
+			return $q->Select('*','navigation',	array('active' => $on));
 		}
 
 		function growBranch($n,$p=0,$active=true){
@@ -444,7 +452,6 @@
 			 //// Prepare Shortcuts /////////////
 			# Open DB Connection
 			$q = $this->q();
-
 
 			$q->Update('public_main_menu',array(
 				'parent' => '0'
