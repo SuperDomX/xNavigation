@@ -1,9 +1,3 @@
-<div class="col-md-12">	
-	Choose a Menu to Edit: 
-	<a href="" class="btn btn-transparent">
-		<i class="fa fa-plus"></i> Add New Menu
-	</a>
-</div>
 <div class="col-md-3">
 	<div class="panel-group" id="accordion2">
 		{foreach $TALK.MENU as $menu => $m}
