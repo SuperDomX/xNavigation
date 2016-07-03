@@ -1,13 +1,13 @@
 <?php
 /**
- * @name Site Map
+ * @name Navigation 
  * @desc Control the Quick Nav, Main Menu, and Site Map of your website.
  * @version v1.0.1
  * @author i@xtiv.net
  * @icon Sign direction.png
- * @mini sitemap
+ * @mini map-signs 
  * @link navigation
- * @see navigate
+ * @see construct 
  * @todo
  * @beta
  */
