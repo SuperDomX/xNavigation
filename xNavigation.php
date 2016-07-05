@@ -1,6 +1,6 @@
 <?php
 /**
- * @name Navigation 
+ * @name Sitemap 
  * @desc Control the Quick Nav, Main Menu, and Site Map of your website.
  * @version v1.0.1
  * @author i@xtiv.net
