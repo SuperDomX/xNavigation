@@ -5,7 +5,7 @@
  * @version v1.0.1
  * @author i@xtiv.net
  * @icon Sign direction.png
- * @mini map-signs 
+ * @mini sitemap 
  * @link navigation
  * @see construct 
  * @todo
