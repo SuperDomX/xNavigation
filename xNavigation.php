@@ -1,16 +1,16 @@
 <?php
-/**
- * @name Sitemap 
- * @desc Control the Quick Nav, Main Menu, and Site Map of your website.
- * @version v1.0.1
- * @author i@xtiv.net
- * @icon Sign direction.png
- * @mini sitemap 
- * @link navigation
- * @see construct 
- * @todo
- * @beta
- */
+  /**
+    * @name Sitemap 
+    * @desc Control the Quick Nav, Main Menu, and Site Map of your website.
+    * @version v0.1(160710)
+    * @author  @xopherdeep
+    * @icon Sign direction.png
+    * @mini sitemap 
+    * @link navigation
+    * @see construct 
+    * @todo
+    * @beta
+  */
 
   class xNavigation extends Xengine{
     function dbSync(){
